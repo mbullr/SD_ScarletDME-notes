@@ -20,7 +20,7 @@ The following programs found in GPL.BP provide the BASIC interface to the python
 
 To build / install  SD-dev-ext with an embedded Python interpreter (Ubuntu 24.04):
 
-Note: Makefile_py looks for the python header file in /usr/include/python3.12. If you have not done so, you will need to install python3.12-dev
+Note: Makefile_py looks for the python header file in /usr/include/python3.12. If you have not done so, you will need to install python3.12-dev::
 
     $ sudo apt install python3.12-dev
 
