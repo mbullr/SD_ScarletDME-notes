@@ -78,7 +78,7 @@ as an example)
 
 `CPROC <CPROC.rst>`__ - Interactive Terminal Command Processor ../sdsys/GPL.BP/CPROC
 
-`VBSRVR <VBSRVR.rst>`__  - QMCLIENT Command processor ../sdsys/GPL.BP/VBSRVR
+`APISRVR <APISRVR.rst>`__  - SDCLIENT Command processor ../sdsys/GPL.BP/APISRVR
 
 `BASIC <BASIC.rst>`__ - BASIC compiler ../sdsys/GPL.BP/BCOMP
 
