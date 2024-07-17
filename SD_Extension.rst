@@ -51,8 +51,7 @@ Function SDME.EXT
 	STATUS() = 0 successful call, or  STATUS() = 1 unsuccessful call
  
 
-To view the steps taken to add this function see AddingOpcodes.rst
-
+To view the steps taken to add this function see `AddingOpcodes <AddingOpcodes.rst>`__
 
  
 
