@@ -5,7 +5,7 @@ Encryption in SD-dev-ext
 
 Encryption extension on SD via SDME.EXT:: 
 
-    ScarleDME               =======c function ============================             ScarleDME
+    SD                     =======c function ==========================   ============ SD ===================
     encrypt call: 
     Pass Text              => libsodium encrypt => Hex or Base64 Encode => returned data (Hex or B64 encoded)
 
