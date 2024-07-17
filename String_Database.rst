@@ -100,4 +100,4 @@ Special Notes on `BASIC compile of internal modules <BASIC.rst>`__.
 
 `Evaluation Stack <EvaluationStack.rst>`__.
 
-`ScarletDME Extension Project <SD_Extension.rst>`__.
+`SD Extension Project <SD_Extension.rst>`__.
