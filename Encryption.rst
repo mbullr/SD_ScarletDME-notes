@@ -1,9 +1,9 @@
 ****************************
-Encryption in SD-dev-ext
+Encryption in SD-dev
 ****************************
 
 
-Encryption extension on SD via SDME.EXT:: 
+Encryption extension on SD::  
 
     SD                     =======c function ============================             SD
     encrypt call: 
@@ -12,7 +12,7 @@ Encryption extension on SD via SDME.EXT::
     decrypt call:
     Pass encoded text      => Hex or Base64 Decode => libsodium decrypt => return text
     
-    Keys, and Salts are all passed / returned as Hex Strings (so we can save them in SD)
+    Keys and Salts are all passed / returned as encoded strings (so we can save them in SD)
     
     Example
     
@@ -26,9 +26,9 @@ Encryption extension on SD via SDME.EXT::
                             SD_EncodeHX   - The key and returned encrypted text are Hex Encoded (passed key is a 64 Hex Character               
                                             string which will be converted to 32 bytes, encrypted text will be a Hex Character String 
                                             2X the length of the passed string to encrypt.
-							SD_EncodeB16  - The key and returned encrypted text are Base16 Encoded -- Not Yet Implemented! -- 
+                            SD_Encode64   - The key and returned encrypted text are Base64 Encoded -- Not Yet Implemented! -- 
     
-	Decrypt call:
+    Decrypt call:
     
 	
     decrypted_text = SDDECRYPT(Data,KeyToUse,Encoding)
@@ -36,10 +36,10 @@ Encryption extension on SD via SDME.EXT::
         Data = encrypted string
         KeyToUse = should be crypto_secretbox_KEYBYTES bytes (currently defined as 32 bytes / 256 bits) string **
         Encoding =  one of: 
-                            SD_DecodeHX   - The key and passed encrypted text are Hex Encoded (passed key is a 64 Hex Character               
+                            SD_EncodeHX   - The key and passed encrypted text are Hex Encoded (passed key is a 64 Hex Character               
                                             string which will be converted to 32 bytes, encrypted text will be a Hex Character String 
-                                            2X the length of the returned decrypted text.
-							SD_DecodeB16  - The key and passed encrypted text are Base16 Encoded -- Not Yet Implemented! -- 	
+                                            2X the length of the returned decrypted text. 
+                            SD_Encode64   - The key and passed encrypted text are Base64 Encoded -- Not Yet Implemented! -- 	
 	
 	
 	
