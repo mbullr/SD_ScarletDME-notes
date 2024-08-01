@@ -1,5 +1,5 @@
 *********************************
-SD Extend - SDME.EXT
+SD Extend - SDEXT
 *********************************
 
 Generic function for extending SD / BASIC to interface with C code.
@@ -37,10 +37,10 @@ As development advances, it is highly probable that the project will run out of 
 
 Addition of a generic way to interface with C / C Functions will reduce the need for additional op codes.
 
-Function SDME.EXT
+Function SDEXT
 ========================
 
- Function SDME.EXT(Arg, IsArgMV, Function_id)::
+ Function SDEXT(Arg, IsArgMV, Function_id)::
 
     Function_Id = the integer value used to identify what c code / function is execute.
     IsArgMV     = If passing a multiple arguments in Arg, set to true, otherwise false.  

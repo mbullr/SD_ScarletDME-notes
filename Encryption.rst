@@ -26,8 +26,7 @@ Encryption extension on SD::
                             SD_EncodeHX   - The key and returned encrypted text are Hex Encoded (passed key is a 64 Hex Character               
                                             string which will be converted to 32 bytes, encrypted text will be a Hex Character String 
                                             2X the length of the passed string to encrypt.
-                            SD_Encode64   - The key and returned encrypted text are Base64 Encoded -- Not Yet Implemented! -- 
-    
+                            SD_Encode64   - The key and returned encrypted text are Base64 Encoded 
     Decrypt call:
     
 	
@@ -39,12 +38,12 @@ Encryption extension on SD::
                             SD_EncodeHX   - The key and passed encrypted text are Hex Encoded (passed key is a 64 Hex Character               
                                             string which will be converted to 32 bytes, encrypted text will be a Hex Character String 
                                             2X the length of the returned decrypted text. 
-                            SD_Encode64   - The key and passed encrypted text are Base64 Encoded -- Not Yet Implemented! -- 	
+                            SD_Encode64   - The key and passed encrypted text are Base64 Encoded  	
 	
 	
 	
 
-    See the simple test program SD_ENCRYPT in sdsys/BP 
+    See the simple test program SD_ENCRYPT and SD_ENCRYPT_B64 in sdsys/BP 
     
 
 Why libsodium ?

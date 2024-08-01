@@ -3,7 +3,7 @@ Adding Op Codes / Functions to SD
 **********************************
 
 This is a summation of the steps necessary to add a new function to the SD BASIC compiler (GPL.BP/BCOMP) and the associated op code to process the function in the Virtual Machine. 
-In this example we add the BASIC Function SDME.EXT and the corresponding op code function op_sdme_ext to SD.
+In this example we add the BASIC Function SDEXT and the corresponding op code function op_sdme_ext to SD.
 
 Adding The Op Code
 ===================
@@ -64,12 +64,12 @@ YOU HAVE BEEN WARNED
  Adding a new internal intrinsic function requires entries in the INT.INTRINSICS and
  INT.INTRINSIC.OPCODES lists and a corresponding entry in that ON GOSUB.
  
- SDME.EXT will be a function to call other c code functions.  Because of this we should at least make this an internal function, so we add the following lines to BCOMP::
+ SDEXT will be a function to call other c code functions.  Because of this we should at least make this an internal function, so we add the following lines to BCOMP::
     
    Addition of the new function name and op code to multi value strings int.intrinsics and int.intrinsic.opcodes. 
    
    int.intrinsics<-1> = "SCAN"            ; int.intrinsic.opcodes<-1> = OP.BTSCAN
-   int.intrinsics<-1> = "SDME.EXT"        ; int.intrinsic.opcodes<-1> = OP.SDMEEXT     <== our new function name and op code symbolic name
+   int.intrinsics<-1> = "SDEXT"        ; int.intrinsic.opcodes<-1> = OP.SDMEEXT     <== our new function name and op code symbolic name
    int.intrinsics<-1> = "SORTDATA"        ; int.intrinsic.opcodes<-1> = OP.SORTDATA
    
    Adding to ON GOSUB for intrinsic function (a little past label "emit.var.reference.common: in BCOMP")
@@ -87,7 +87,7 @@ YOU HAVE BEEN WARNED
                                  .                 .
                                  .                 .
                                in.scan,       ;* SCAN
-                               in.three,      ;* SDME.EXT      <== emit byte code for our new function 
+                               in.three,      ;* SDEXT      <== emit byte code for our new function 
                                in.none,       ;* SORTDATA								 
    
 
@@ -100,4 +100,4 @@ Then compile:
 
 BASIC GPL.BP BCOMP
 
-If all is correct, function SDME.EXT is now available for use.
+If all is correct, function SDEXT is now available for use.
